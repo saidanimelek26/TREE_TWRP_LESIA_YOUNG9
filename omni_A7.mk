@@ -6,23 +6,24 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/twrp/config/common.mk)
 
-# Inherit from A7 device
-$(call inherit-product, device/iku/A7/device.mk)
+# Inherit from YOUNG9 device
+$(call inherit-product, device/LESIA/YOUNG9/device.mk)
 
-PRODUCT_DEVICE := A7
-PRODUCT_NAME := omni_A7
-PRODUCT_BRAND := iKU
-PRODUCT_MODEL := A7
-PRODUCT_MANUFACTURER := iku
+PRODUCT_DEVICE := YOUNG9
+PRODUCT_NAME := omni_YOUNG9
+PRODUCT_BRAND := LESIA
+PRODUCT_MODEL := YOUNG9
+PRODUCT_MANUFACTURER := LESIA
+TW_DEVICE_VERSION := meleksaidani
+
 
 PRODUCT_GMS_CLIENTID_BASE := android-fortuneship
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="sp7731e_1h10_go2g-user 11 RP1A.201005.001 48309 release-keys"
-
-BUILD_FINGERPRINT := iKU/A7/A7:11/RP1A.201005.001/39319:user/release-keys
+# fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock
