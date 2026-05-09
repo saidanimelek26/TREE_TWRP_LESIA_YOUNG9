@@ -6,6 +6,7 @@
 #
 
 LOCAL_PATH := device/LESIA/YOUNG9
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -13,21 +14,14 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-# Boot control HAL
+# Boot control HAL - using shared library (modern approach)
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
-
-PRODUCT_PACKAGES += \
-    bootctrl.sp7731e
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    android.hardware.boot@1.0-service \
     bootctrl.sp7731e \
     libgptutils \
     libz \
-    libcutils
-
-PRODUCT_PACKAGES += \
+    libcutils \
     otapreopt_script \
     cppreopts.sh \
     update_engine \
