@@ -15,7 +15,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/LESIA/YOUNG9/device.mk)
 
 PRODUCT_DEVICE := YOUNG9
-PRODUCT_NAME := omni_YOUNG9
+PRODUCT_NAME := twrp_YOUNG9
 PRODUCT_BRAND := LESIA
 PRODUCT_MODEL := YOUNG9
 PRODUCT_MANUFACTURER := LESIA
