@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_A7.mk
+    $(LOCAL_DIR)/twrp_YOUNG9.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_A7-user \
-    omni_A7-userdebug \
-    omni_A7-eng
+    twrp_YOUNG9-user \
+    twrp_YOUNG9-userdebug \
+    twrp_YOUNG9-eng
